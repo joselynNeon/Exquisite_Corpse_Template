@@ -92,7 +92,8 @@ void draw(){
     
     //audio from movie
     image(movieMatilda, 0, 0);
-    float newSpeed = map(remote_sliderY_val, -10, 10, 0.1, 2);
+    println("y: " + remote_sliderY_val);
+    float newSpeed = map(remote_sliderX_val, -10, 10, .8, 1.2);
     movieMatilda.speed(newSpeed);
   
   // ---- we're done! ---- //
@@ -119,7 +120,15 @@ void onBooleanMessage( String name, boolean value ){
 //NICOLE: changed to receive onRange values
 void onRangeMessage( String name, int value ){
   //println("got range message " + name + " : " + value);
-  remote_sliderX_val = value;
+  
+  
+  if (name.equals("remote_sliderX")){
+   //do x stuff
+   remote_sliderX_val = value;
+} else if (name.equals("remote_sliderY")){
+   //do y stuff
+   remote_sliderY_val = value;
+}
 }
 
 

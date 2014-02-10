@@ -24,7 +24,6 @@ int remote_slider_val;
 //Nicole: Variables
 PImage cake;
 PImage eating;
-float fillColor;
 int remote_sliderX_val;
 int remote_sliderY_val;
 int pictureLength;
@@ -34,6 +33,7 @@ int eatingHeight;
 float eatingWidthMap;
 float eatingHeightMap;
 Movie movieMatilda;
+int cakeHeight = 0;
 
 void setup() {
   size( appWidth, appHeight );
@@ -44,6 +44,8 @@ void setup() {
 
   // add any of your own subscribers here!
   sb.addSubscribe( "remote_slider", "range" );
+  sb.addSubscribe( "remote_sliderX", "range" );
+  sb.addSubscribe( "remote_sliderY", "range" );
 
   sb.connect( server, name, desc );
 
@@ -91,8 +93,19 @@ void draw() {
     //audio from movie
     image(movieMatilda, 0, 0);
     println("y: " + remote_sliderY_val);
-    float newSpeed = map(remote_sliderX_val, -10, 10, .8, 1.2);
-    movieMatilda.speed(newSpeed);
+    
+    //falling cake
+      if (remote_sliderX_val == -10 || remote_sliderX_val==10) {
+    image(cake, width/27, cakeHeight, 50, 50);
+    image(cake, width/9, cakeHeight, 50, 50);
+    image(cake, 5*width/27, cakeHeight, 50, 50);
+    image(cake, 7*width/27, cakeHeight, 50, 50);
+    cakeHeight += 10;
+  }
+  
+  if (cakeHeight == height){
+   cakeHeight = 0; 
+  }
 
     // ---- start person 2 ---- //
   } 

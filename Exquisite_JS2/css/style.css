@@ -1,0 +1,63 @@
+body 
+{
+			padding: 20px; font: 14px/145% "Helvetica Neue", Helvetica, Arial, Sans-serif;	
+      background-color: pink; 				
+			background-image:url('mygif.gif') ;
+      background-repeat: repeat;  
+         display: block;
+         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      font-size: 80px; 
+
+}
+a, a:link, a:visited { text-decoration: none; }
+
+.button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+  box-shadow:inset 0px 1px 0px 0px #cae3fc;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #42edb4) );
+  background:-moz-linear-gradient( center top, #79bbff 5%, #42edb4 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#42edb4');
+  background-color:#79bbff;
+  -webkit-border-top-left-radius:0px;
+  -moz-border-radius-topleft:0px;
+  border-top-left-radius:0px;
+  -webkit-border-top-right-radius:0px;
+  -moz-border-radius-topright:0px;
+  border-top-right-radius:0px;
+  -webkit-border-bottom-right-radius:0px;
+  -moz-border-radius-bottomright:0px;
+  border-bottom-right-radius:0px;
+  -webkit-border-bottom-left-radius:0px;
+  -moz-border-radius-bottomleft:0px;
+  border-bottom-left-radius:0px;
+  text-indent:0px;
+  border:1px solid #469df5;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:38px;
+  font-weight:bold;
+  font-style:normal;
+  height:100px;
+  line-height:100px;
+  width:200px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:1px 1px 0px #287ace;
+
+}
+.button:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #42edb4), color-stop(1, #79bbff) );
+  background:-moz-linear-gradient( center top, #42edb4 5%, #79bbff 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#42edb4', endColorstr='#79bbff');
+  background-color:#42edb4;
+}.button:active {
+  position:relative;
+  top:1px;
+
+h1 {
+    font-size: 200px; 
+  }
